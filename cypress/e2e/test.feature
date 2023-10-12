@@ -1,5 +1,5 @@
 Feature: W
-
+@testkay=test1
    Scenario: test
    Given test
    And read from json file
