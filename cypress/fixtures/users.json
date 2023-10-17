@@ -1,0 +1,72 @@
+[
+  {
+    "id": 5371173,
+    "name": "Brajendra Asan Jr.",
+    "email": "jr_asan_brajendra@senger.test",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 5371172,
+    "name": "Laxman Shah",
+    "email": "laxman_shah@torphy.example",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 5371171,
+    "name": "Kashyap Tandon III",
+    "email": "iii_tandon_kashyap@grady.test",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 5371170,
+    "name": "Ashok Butt",
+    "email": "butt_ashok@yost.example",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 5371169,
+    "name": "Upendra Nair Jr.",
+    "email": "nair_jr_upendra@ward.test",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 5371168,
+    "name": "Charuchandra Khanna II",
+    "email": "khanna_charuchandra_ii@fahey.example",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 5371167,
+    "name": "Sushil Sethi",
+    "email": "sushil_sethi@leffler-lubowitz.test",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 5371166,
+    "name": "Vishwamitra Guneta PhD",
+    "email": "phd_vishwamitra_guneta@smith.example",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 5371165,
+    "name": "Chaten Patel",
+    "email": "chaten_patel@lowe.example",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 5371164,
+    "name": "Akshayakeerti Kocchar",
+    "email": "kocchar_akshayakeerti@schneider-volkman.test",
+    "gender": "male",
+    "status": "inactive"
+  }
+]
