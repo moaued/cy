@@ -17,7 +17,13 @@ import 'cypress-mochawesome-reporter/register';
 import './commands'
 beforeEach(() => {
 
-    cy.visit('/')
+    cy.visit('/',{
+      headers: {
+        'accept': 'application/json, text/plain, */*',
+        'user-agent': 'axios/0.27.2'
+    }
+    })
+
   
   })
 // Alternatively you can use CommonJS syntax:
