@@ -1,0 +1,92 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Api",
+    "line": 1,
+    "id": "api",
+    "tags": [],
+    "uri": "Api.feature",
+    "elements": [
+      {
+        "id": "api;api-get-scenario",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "api get Scenario",
+        "tags": [
+          {
+            "name": "@testkay=api1",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "get request",
+            "result": {
+              "status": "passed",
+              "duration": 5447000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api;api-post-scenario",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "api post Scenario",
+        "tags": [
+          {
+            "name": "@testkay=api2",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "users post request",
+            "result": {
+              "status": "passed",
+              "duration": 2226000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "posts post request",
+            "result": {
+              "status": "passed",
+              "duration": 426000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "API - PUT Request",
+            "result": {
+              "status": "passed",
+              "duration": 455000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "API - DELETE Request",
+            "result": {
+              "status": "passed",
+              "duration": 374000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
