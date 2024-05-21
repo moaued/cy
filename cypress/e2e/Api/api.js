@@ -1,6 +1,6 @@
 
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
-import { Generate_app_id,} from '../../support/utlis/common.cy'
+import { Generate_app_id,} from '../../support/utlis/common'
 import { faker } from '@faker-js/faker';
 import { describe } from 'mocha';
 
@@ -17,16 +17,35 @@ Given('get request',()=>{
 }).as('details')
 cy.get('@details').its('status').should('eq', 200)
 cy.get('@details').then((response) => {
-    cy.log(JSON.stringify(response.body))
-    cy.log(JSON.stringify(response.body.id))
+    // cy.log(JSON.stringify(response.body))
+    cy.log(JSON.stringify(response.body[0].id))
     
-    cy.readFile("cypress/fixtures/users.json").then((profile) => {
-     profile= response.body
-     cy.writeFile('cypress/fixtures/users.json', profile)
+   
+    const responseData = {};
+
+    // Store the response data as key-value pairs
+    response.body.forEach((user, index) => {
+      responseData[`user_${index + 1}`] = user;
+    });
+  
+     cy.writeFile('cypress/fixtures/users.json',  responseData)
+
+     cy.readFile('cypress/fixtures/users.json').then((users) => {
+  // The contents of the file are now available in the 'users' variable
+  const firstUser = users['user_1'];
+       // Log the first user's name
+    //   // Log the first user's name and email
+  cy.log(`First user name: ${firstUser.name}`);
+  cy.log(`First user email: ${firstUser.email}`);
+      
+    
+    
+      });
+      
 
  })
 })     
-})
+
 Given('users post request',()=>{
      
 cy.log(random)

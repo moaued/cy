@@ -1,9 +1,17 @@
 const { defineConfig } = require("cypress");
+const fs = require('fs');
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
+  defaultCommandTimeout: 50000,
+  execTimeout: 1200000,
+  taskTimeout: 1200000,
+  retries:{ "runMode": 0, "openMode": 0},
+  screenshotOnRunFailure: true,
+  trashAssetsBeforeRuns: true,
+  video: true,
   e2e: {
-    baseUrl: 'https://www.programsbuzz.com/user/login',
+    baseUrl: 'https://magento.softwaretestingboard.com/',
     
     "specPattern": "cypress/e2e/**/*.{feature,features}",
     "chromeWebSecurity": false,
@@ -13,10 +21,15 @@ module.exports = defineConfig({
       "--allow-running-insecure-content",
       "--ignore-urlfetcher-cert-requests",
       "--ignore-certificate-errors-spki-list"
+
     ],
     setupNodeEvents(on, config) {
       // implement node event listeners here
-    
+      on('after:spec', (spec, results) => {
+        if (results && results.stats.failures === 0 && results.video) {
+          return fs.unlinkSync(results.video);
+        }
+      });
       require('cypress-mochawesome-reporter/plugin')(on);
         
   

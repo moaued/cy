@@ -1,9 +1,10 @@
 
 
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
+import { Registration } from '../../support/utlis/common'
 Given('test',()=>{
   
-cy.log("djdjj") 
+cy.log("cypress") 
  })
  And('read from json file',()=>{
     cy.readFile("cypress/fixtures/user.json").then((data) => { 
@@ -22,11 +23,19 @@ cy.log("djdjj")
         cy.log(fileContents)
         const jsonString = JSON.stringify(fileContents);
         const jsonData = JSON.parse(jsonString);
-        var pass= 12323
+        var pass= 123234
         jsonData.psaa = pass;
-        jsonData.username2 = "ayed";
+        jsonData.username2 = "ayedsaAD";
         cy.writeFile('cypress/fixtures/user.json', JSON.stringify(jsonData)).then(() => {
       
         })
+       
+
         })
+ })
+ And('Registration',()=>{
+
+   Registration()
+
+
  })
